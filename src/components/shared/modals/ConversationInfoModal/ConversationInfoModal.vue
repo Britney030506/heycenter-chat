@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 import type { Ref } from "vue";
 import { computed, ref } from "vue";
 
@@ -35,6 +35,7 @@ const ActivePage = computed(() => {
   else if (activePageName.value === "group-member") return ConversationInfo;
   else if (activePageName.value === "shared-media") return SharedMedia;
   else if (activePageName.value === "edit-group") return EditGroupInfo;
+  else return null; // Agrega este caso para otros valores posibles o devuelve el componente por defecto que corresponda
 });
 
 // (event) move between modal pages

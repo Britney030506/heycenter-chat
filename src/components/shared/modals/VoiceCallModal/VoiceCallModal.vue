@@ -28,16 +28,15 @@ const modalSize = ref("290px");
 // the active modal component
 const ActiveComponent = computed(() => {
   if (store.activeCall) {
-    if (store?.activeCall.status === "dialing") {
+    if (store.activeCall.status === "dialing") {
       modalSize.value = "290px";
       return Dialing;
-    } else if (store?.activeCall.status === "ongoing") {
+    } else if (store.activeCall.status === "ongoing") {
       modalSize.value = "400px";
       return Ongoing;
     }
-  } else {
-    return "div";
   }
+  return "div";
 });
 
 const handleCallStatusChange = (status: string) => {

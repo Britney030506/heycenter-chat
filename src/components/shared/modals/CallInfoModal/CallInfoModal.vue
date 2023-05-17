@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="js">
 import { computed, ref } from "vue";
 
 import type { ICall } from "@src/types";
