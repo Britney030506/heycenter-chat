@@ -49,7 +49,7 @@ const activeChatComponent = computed(() => {
         <FadeTransition name="fade" mode="out-in">
           <component
             :is="activeChatComponent"
-            :key="store.activeConversationId"
+            :key="String(store.activeConversationId)"
           />
         </FadeTransition>
       </div>

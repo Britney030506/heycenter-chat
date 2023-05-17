@@ -11,7 +11,7 @@ const ActiveComponent = computed(() => {
   if (store.activeSidebarComponent === "messages") {
     return Conversations;
   }
-});
+}) as any;
 </script>
 
 <template>
